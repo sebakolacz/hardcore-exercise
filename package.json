@@ -9,7 +9,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged && jest"
+      "pre-push": "set CI=true&&npm test"
     }
   },
   "lint-staged": {
@@ -79,6 +79,8 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "mdb-ui-kit": "3.0.0"
+    "bypass": "0.0.2",
+    "mdb-ui-kit": "3.0.0",
+    "to": "^0.2.9"
   }
 }
