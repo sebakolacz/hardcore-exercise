@@ -29,22 +29,11 @@
       <form class="container__form">
         <div class="container__form-name">
           <label for="">Nazwa produktu:</label>
-          <input type="text" class="container__form-input" />
+          <input type="text" class="container__form-input container__form-input-name" />
         </div>
         <div class="container__form-number">
           <label for="" id="container__form-number-toggle">Liczba:</label>
-          <input type="number" class="container__form-input" />
-        </div>
-        <div class="container__form-radio">
-          <input
-            class="container__form-radio-input-kg"
-            type="radio"
-            id="kg"
-            name="value"
-            value="kg"
-            checked
-          />
-          <label for="kg">kg</label>
+          <input type="number" class="container__form-input container__form-input-number" />
         </div>
         <div class="container__form-radio">
           <input
@@ -53,18 +42,29 @@
             id="szt"
             name="value"
             value="szt"
+            checked
           />
           <label for="szt">szt</label>
+        </div>
+        <div class="container__form-radio">
+          <input
+            class="container__form-radio-input-kg"
+            type="radio"
+            id="kg"
+            name="value"
+            value="kg"
+          />
+          <label for="kg">kg</label>
         </div>
         <div class="container__form-select">
           <label for="">Kategoria:</label>
           <select name="" id="" class="container__form-select-panel">
             <option value="">--Wybierz kategorię--</option>
-            <option value="">warzywa</option>
-            <option value="">owoce</option>
-            <option value="">nabiał</option>
-            <option value="">pieczywo</option>
-            <option value="">artykuły chigieniczne</option>
+            <option value="warzywa">warzywa</option>
+            <option value="owoce">owoce</option>
+            <option value="nabiał">nabiał</option>
+            <option value="pieczywo">pieczywo</option>
+            <option value="artykuły chigieniczne">artykuły chigieniczne</option>
           </select>
         </div>
         <button class="container__form-btn">Dodaj</button>
@@ -80,10 +80,11 @@
         </thead>
         <tbody class="container__table-tbody">
           <tr class="container__table-body-tr">
-            <th class="container__table-body-th"></th>
-            <th class="container__table-body-th"></th>
-            <th class="container__table-body-th"></th>
-            <th class="container__table-body-th"></th>
+            <th class="container__table-body-th category"></th>
+            <th class="container__table-body-th name"></th>
+            <th class="container__table-body-th number"></th>
+            <th class="container__table-body-th weight"></th>
+            <th><button class="container__table-body-th-remove">X</button></th>
           </tr>
         </tbody>
       </table>
@@ -93,5 +94,5 @@
   <!-- Main js file -->
   <script type="text/javascript" src="js/index.min.js"></script>
   <!-- Custom scripts -->
-  <script type="text/javascript"></script>
-</html>
+  <script type="text/javascript" src="./js/index.js"></script>
+  </html>
