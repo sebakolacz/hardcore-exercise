@@ -1,29 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
 
     const button = document.querySelector('.form-btn');
 
-    button.addEventListener("click", e => {
+    button.addEventListener('click', e => {
         e.preventDefault();
 
         const newTrElement = document.createElement('tr');
-        const tbody = document.querySelector(".table-tbody");
-        newTrElement.classList.add("table-body-tr");
+        const tbody = document.querySelector('.table-tbody');
+        newTrElement.classList.add('table-body-tr');
         tbody.append(newTrElement);
 
         const newTdElementCategory = document.createElement('td');
-        newTdElementCategory.classList.add("table-body-td-category");
+        newTdElementCategory.classList.add('table-body-td-category');
         newTrElement.append(newTdElementCategory);
 
         const newTdElementName = document.createElement('td');
-        newTdElementName.classList.add("table-body-td-name");
+        newTdElementName.classList.add('table-body-td-name');
         newTrElement.append(newTdElementName);
 
         const newTdElementNumber = document.createElement('td');
-        newTdElementNumber.classList.add("table-body-td-number");
+        newTdElementNumber.classList.add('table-body-td-number');
         newTrElement.append(newTdElementNumber);
 
         const newTdElementWeight = document.createElement('td');
-        newTdElementWeight.classList.add("table-body-td-weight");
+        newTdElementWeight.classList.add('table-body-td-weight');
         newTrElement.append(newTdElementWeight);
 
         const newTdElementLiter = document.createElement('td');
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const literInput = document.querySelector('.form-input-number');
 
+        
         newTdElementCategory.textContent = categoryInput.value;
         newTdElementName.textContent = nameInput.value;
 
@@ -75,10 +76,10 @@ document.addEventListener("DOMContentLoaded", function() {
         numberInput.value = '';
         weightInput.value = '';
 
-        newButtonElement.addEventListener("click", function(e) {
-            e.preventDefault();
-            newTrElement.remove();
-        });
+    newButtonElement.addEventListener('click', function (e) {
+      e.preventDefault();
+      newTrElement.remove();
+    });
 
     });
 
