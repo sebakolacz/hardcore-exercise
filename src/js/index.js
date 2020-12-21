@@ -1,27 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  {
-
-    const number = document.querySelector('#szt');
-    const weight = document.querySelector('#kg');
-    const toggleName = document.querySelector('#form-number-toggle');
-
-    const handleClick1 = () => {
-        toggleName.innerText = 'Waga:';
-    }
-
-    const handleClick2 = () => {
-        toggleName.innerText = 'Liczba:';
-    }
-
-    weight.addEventListener("click", handleClick1);
-
-    number.addEventListener("click", handleClick2);
-
-  };
-
-  {
-
     const button = document.querySelector('.form-btn');
 
     button.addEventListener("click", e => {
@@ -48,54 +26,60 @@ document.addEventListener("DOMContentLoaded", function() {
         newTdElementWeight.classList.add("table-body-td-weight");
         newTrElement.append(newTdElementWeight);
 
+        const newTdElementLiter = document.createElement('td');
+        newTdElementLiter.classList.add("table-body-td-liter");
+        newTrElement.append(newTdElementLiter);
+
         const newTdElementButton = document.createElement('td');
         newTdElementButton.classList.add("table-body-td-button");
         newTdElementButton.style = "padding: 0 10px;"
         newTrElement.append(newTdElementButton);
         
-        const newButtonElement = document.createElement('a');
+        const newButtonElement = document.createElement('button');
         newButtonElement.classList.add("table-body-td-button-rm");
-        newButtonElement.setAttribute('href', "#");
         newTdElementButton.append(newButtonElement);
         newButtonElement.textContent = "X";
 
         const numberCheck = document.querySelector('#szt');
         const weightCheck = document.querySelector('#kg');
+        const literCheck = document.querySelector('#l');
 
         const categoryInput = document.querySelector('.form-select-panel');
-        const category = document.querySelector('.table-body-td-category');
 
         const nameInput = document.querySelector('.form-input-name');
-        const name = document.querySelector('.table-body-td-name');
 
         const numberInput = document.querySelector('.form-input-number');
-        const number = document.querySelector('.table-body-td-number');
 
         const weightInput = document.querySelector('.form-input-number');
-        const weight = document.querySelector('.table-body-td-weight');
 
-        category.innerHTML = categoryInput.value;
-        name.innerHTML = nameInput.value;
+        const literInput = document.querySelector('.form-input-number');
+
+        newTdElementCategory.textContent = categoryInput.value;
+        newTdElementName.textContent = nameInput.value;
 
         if (numberCheck.checked) {
-            number.innerHTML = numberInput.value + " szt.";
-            weight.innerHTML = "--";
+            newTdElementNumber.textContent = numberInput.value + " szt.";
+            newTdElementWeight.textContent = "--";
+            newTdElementLiter.textContent = "--";
         } else if (weightCheck.checked) {
-            weight.innerHTML = weightInput.value + " kg.";
-            number.innerHTML = "--";
+            newTdElementWeight.textContent = weightInput.value + " kg.";
+            newTdElementNumber.textContent = "--";
+            newTdElementLiter.textContent = "--";
+        } else if (literCheck.checked) {
+            newTdElementLiter.textContent = literInput.value + " l.";
+            newTdElementWeight.textContent = "--";
+            newTdElementNumber.textContent = "--";
         }
         categoryInput.value = '';
         nameInput.value = '';
         numberInput.value = '';
         weightInput.value = '';
+
+        newButtonElement.addEventListener("click", function(e) {
+            e.preventDefault();
+            newTrElement.remove();
+        });
+
     });
 
-    const btnRm = table.querySelectorAll('.table-body-td-button-rm');
-
-          btnRm.forEach(el => {
-            el.addEventListener("click", function() {
-                el.closest("tr").remove();
-            })
-        })
-  }
 });
