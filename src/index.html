@@ -25,19 +25,22 @@
 
   <body>
     <!-- Start your project here-->
-    <div class="container">
-      <form class="container__form">
-        <div class="container__form-name">
+
+      <form class="form">
+
+        <div class="form-name">
           <label for="">Nazwa produktu:</label>
-          <input type="text" class="container__form-input container__form-input-name" />
+          <input type="text" class="form-input form-input-name" />
         </div>
-        <div class="container__form-number">
-          <label for="" id="container__form-number-toggle">Liczba:</label>
-          <input type="number" class="container__form-input container__form-input-number" />
+
+        <div class="form-number">
+          <label for="" id="form-number-toggle">Liczba:</label>
+          <input type="number" class="form-input form-input-number" />
         </div>
-        <div class="container__form-radio">
+
+        <div class="form-radio">
           <input
-            class="container__form-radio-input-szt"
+            class="form-radio-input-szt"
             type="radio"
             id="szt"
             name="value"
@@ -46,9 +49,10 @@
           />
           <label for="szt">szt</label>
         </div>
-        <div class="container__form-radio">
+
+        <div class="form-radio">
           <input
-            class="container__form-radio-input-kg"
+            class="form-radio-input-kg"
             type="radio"
             id="kg"
             name="value"
@@ -56,9 +60,10 @@
           />
           <label for="kg">kg</label>
         </div>
-        <div class="container__form-select">
+
+        <div class="form-select">
           <label for="">Kategoria:</label>
-          <select name="" id="" class="container__form-select-panel">
+          <select name="" id="" class="form-select-panel">
             <option value="">--Wybierz kategorię--</option>
             <option value="Warzywa">warzywa</option>
             <option value="Owoce">owoce</option>
@@ -67,28 +72,23 @@
             <option value="Artykuły chigieniczne">artykuły chigieniczne</option>
           </select>
         </div>
-        <button class="container__form-btn">Dodaj</button>
+        <button class="form-btn">Dodaj</button>
       </form>
-      <table class="container__table">
-        <thead class="container__table-thead">
-          <tr class="container__table-thead-tr">
-            <th class="container__table-thead-th">Kategoria</th>
-            <th class="container__table-thead-th">Nazwa</th>
-            <th class="container__table-thead-th">Liczba</th>
-            <th class="container__table-thead-th">Waga</th>
+
+      <table class="table">
+        <thead class="table-thead">
+          <tr class="table-thead-tr">
+            <th class="table-thead-th">Kategoria</th>
+            <th class="table-thead-th">Nazwa</th>
+            <th class="table-thead-th">Liczba</th>
+            <th class="table-thead-th">Waga</th>
           </tr>
         </thead>
-        <tbody class="container__table-tbody">
-          <tr class="container__table-body-tr">
-            <th class="container__table-body-th category"></th>
-            <th class="container__table-body-th name"></th>
-            <th class="container__table-body-th number"></th>
-            <th class="container__table-body-th weight"></th>
-            <th><button class="container__table-body-th-remove">X</button></th>
-          </tr>
+        <tbody class="table-tbody">
+
         </tbody>
       </table>
-    </div>
+
     <!-- End your project here-->
   </body>
   <!-- Main js file -->
