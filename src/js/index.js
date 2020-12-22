@@ -199,8 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
   newTdElementNumberSummary.classList.add('table-body-td-number-summary');
   newTrSummary.append(newTdElementNumberSummary);
 
-  newTdElementNumberSummary.textContent = newTdElementNumber.value;
-
   const newTdElementWeightSummary = document.createElement('td');
   newTdElementWeightSummary.classList.add('table-body-td-weight-summary');
   newTrSummary.append(newTdElementWeightSummary);
